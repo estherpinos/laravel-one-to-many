@@ -10,6 +10,7 @@
         <th scope="col">ID</th>
         <th scope="col">Title</th>
         <th scope="col">Description</th>
+        <th scope="col">Type</th>
         <th scope="col">Azioni</th>
 
       </tr>
@@ -22,6 +23,8 @@
             <td>{{$project->id}}</td>
             <td>{{$project->title}}</td>
             <td>{{$project->description}}</td>
+            <td>{{$project->type->title}}</td>
+
             <td>
                 <a href="{{ route('admin.projects.show', $project) }}" class="btn btn-warning "><i class="fa-solid fa-eye"></i></a>
                 <a href="{{ route('admin.projects.create', $project) }}" class="btn btn-danger"><i class="fa-solid fa-pencil"></i></a>
