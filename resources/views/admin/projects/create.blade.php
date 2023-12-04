@@ -34,17 +34,14 @@
                   <span class="text-danger">{{ $message }}</span>
               @enderror
             </div>
+            <label for="type_id" class="form-label">Type</label>
+
             <div class="mb-3">
-                <label for="type_id" class="form-label">Type</label>
-                <input
-                type="text"
-                class="form-control @error('type') is-invalid  @enderror"
-                id="type"
-                name="type"
-                value="{{ old('type')}}">
-              @error('type')
-                  <span class="text-danger">{{ $message }}</span>
-              @enderror
+                <select name="type_id" class="form-select" id="type_id">
+                    @foreach ($types as $type )
+                        <option value="{{$type->id}}" {{old("type_id", $project?->type_id) == $type->id?'selected' : ''}}>{{$type->title}}</option>
+                    @endforeach
+                  </select>
             </div>
 
             {{-- BUTTONS --}}

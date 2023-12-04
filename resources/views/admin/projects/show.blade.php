@@ -9,6 +9,9 @@
     <div class="info">
 
         <div class="description my-2">Description: {{$project->description}}</div>
+        <div class="description my-2">Type: {{$project->type->title}}</div>
+
+
 
     </div>
 </div>
