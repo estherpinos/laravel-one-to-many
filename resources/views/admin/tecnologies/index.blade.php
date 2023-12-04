@@ -4,7 +4,7 @@
 
 <h3 class="text-black">PROJECTS</h3>
 
-<table class="table table-dark">
+<table class="table">
     <thead>
       <tr>
         <th scope="col">ID</th>

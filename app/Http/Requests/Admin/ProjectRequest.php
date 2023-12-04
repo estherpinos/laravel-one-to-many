@@ -24,7 +24,6 @@ class ProjectRequest extends FormRequest
         return [
             "title"=>"required|max:70",
             "description"=>"required"
-
         ];
     }
 

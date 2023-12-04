@@ -34,6 +34,18 @@
                   <span class="text-danger">{{ $message }}</span>
               @enderror
             </div>
+            <div class="mb-3">
+                <label for="type_id" class="form-label">Type</label>
+                <input
+                type="text"
+                class="form-control @error('type') is-invalid  @enderror"
+                id="type"
+                name="type"
+                value="{{ old('type')}}">
+              @error('type')
+                  <span class="text-danger">{{ $message }}</span>
+              @enderror
+            </div>
 
             {{-- BUTTONS --}}
             <button type="submit" class="btn btn-primary">Send</button>
