@@ -23,7 +23,8 @@ class ProjectRequest extends FormRequest
     {
         return [
             "title"=>"required|max:70",
-            "description"=>"required"
+            "description"=>"required",
+            "type"=>"required"
         ];
     }
 
@@ -31,6 +32,7 @@ class ProjectRequest extends FormRequest
         return[
             "title.required" => "Ilt titolo è obbligatorio",
             "description.required" => "La descrizione è obbligatoria",
+            "type.required"=>"Devi selezzionare una tipologia"
 
 
         ];

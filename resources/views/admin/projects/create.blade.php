@@ -42,6 +42,9 @@
                         <option value="{{$type->id}}" {{old("type_id", $project?->type_id) == $type->id?'selected' : ''}}>{{$type->title}}</option>
                     @endforeach
                   </select>
+                  @error('type')
+                    <span class="text-danger">{{ $message }}</span>
+                  @enderror
             </div>
 
             {{-- BUTTONS --}}
